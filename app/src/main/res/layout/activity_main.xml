@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/tv_AC"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="AC"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+            <TextView
+                android:id="@+id/tv_plusandminus"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="+/-"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+            <TextView
+                android:id="@+id/tv_percentage"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="%"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+            <TextView
+                android:id="@+id/tv_devide"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/textview_design_solid"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="45sp" /> />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/tv_7"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+            <TextView
+                android:id="@+id/tv_8"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_9"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_multiply"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/textview_design_solid"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="x"
+                android:textColor="@color/white"
+                android:textSize="45sp" /> />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_6"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_minus"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/textview_design_solid"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="45sp" /> />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:onClick="onClickNumber1"
+                android:padding="7.5dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:onClick="onClickNumber2"
+                android:padding="7.5dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:onClick="onClickNumber4"
+                android:padding="7.5dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_plus"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/textview_design_solid"
+                android:gravity="center"
+                android:onClick="onClickNumber1"
+                android:padding="7.5dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="45sp" /> />
+
+
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_0"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="8"
+                android:background="@drawable/btn_click"
+                android:gravity="center"
+                android:onClick="onClickNumber3"
+                android:padding="7.5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_dot"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/texview_design"
+                android:gravity="center"
+                android:padding="7.5dp"
+                android:text="."
+                android:textColor="@color/white"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_equal"
+                android:layout_width="0dp"
+                android:layout_marginRight="5sp"
+                android:layout_weight="4"
+                android:background="@drawable/textview_design_solid"
+                android:gravity="center"
+                android:onClick="onClickNumber3"
+                android:padding="7.5dp"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="45sp" /> />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

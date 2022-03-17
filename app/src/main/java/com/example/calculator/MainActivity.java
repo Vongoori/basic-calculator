@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     String param1 = "0";
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView1.setText("");
         textView.setText("0");
+
     }
 
     public void onClickAC(View v){
@@ -43,15 +46,63 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void onClickMinus(View v){
+        isExpEntered = true;
+        param1 = textView.getText().toString();
+        mathExpression = "-";
+        if(!param1.isEmpty()) {
+            textView1.setText(param1 + mathExpression);
+            textView.setText(param1);
+        }
+    }
+
+    public void onClickMultiply(View v){
+        isExpEntered = true;
+        param1 = textView.getText().toString();
+        mathExpression = "*";
+        if(!param1.isEmpty()) {
+            textView1.setText(param1 + mathExpression);
+            textView.setText(param1);
+        }
+    }
+
+    public void onClickDivide(View v){
+        isExpEntered = true;
+        param1 = textView.getText().toString();
+        mathExpression = "/";
+        if(!param1.isEmpty()) {
+            textView1.setText(param1 + mathExpression);
+            textView.setText(param1);
+        }
+    }
+
     public void onClickEqual(View v){
         isExpEntered = true;
         param2 = textView.getText().toString();
-        int p1 = Integer.parseInt(param1);
-        int p2 = Integer.parseInt(param2);
-        int r = calculateResult(p1, p2, mathExpression);
-        textView1.setText(param1+" "+mathExpression+" "+param2+" =");
-        if(r != 0){
-            textView.setText(r+"");
+        double p1 = Double.parseDouble(param1);
+        double p2 = Double.parseDouble(param2);
+        double r = calculateResult(p1, p2, mathExpression);
+        String result = r+"";
+        Log.i("MainActivity", "result: "+result);
+        String[] rr =  result.split("\\.");
+        Log.i("MainActivity", "rr length: "+rr.length);
+        for(String s: rr){
+            Log.i("MainActivity", "rr array: "+s);
+        }
+        Log.i("MainActivity", rr[1].charAt(0)+"");
+        String decimal = rr[1].charAt(0)+"";
+        Log.i("MainActivity", "decimal: "+rr[1].charAt(0)+"");
+        if(decimal.equals("0")){
+            textView1.setText(param1 + " " + mathExpression + " " + param2 + " =");
+            textView.setText(rr[0]);
+        }else {
+            DecimalFormat df = new DecimalFormat("0.00");
+            df.setMaximumFractionDigits(4);
+            textView1.setText(param1 + " " + mathExpression + " " + param2 + " =");
+
+            if (r != 0) {
+                textView.setText(df.format(r));
+            }
         }
 
         param1 = "0";
@@ -59,10 +110,19 @@ public class MainActivity extends AppCompatActivity {
         mathExpression = "";
     }
 
-    public int calculateResult(int p1, int p2, String expression){
-        int result = 0;
+    public double calculateResult(double p1, double p2, String expression){
+        double result = 0;
         if(expression == "+"){
             result = p1 + p2;
+        }
+        if(expression == "-"){
+            result = p1 - p2;
+        }
+        if(expression == "*"){
+            result = p1 * p2;
+        }
+        if(expression == "/"){
+            result = p1 / p2;
         }
 
         return  result;

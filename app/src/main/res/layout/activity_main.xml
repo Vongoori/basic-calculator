@@ -99,8 +99,8 @@
                 android:layout_weight="4"
                 android:background="@drawable/textview_design_solid"
                 android:gravity="center"
+                android:onClick="onClickDivide"
                 android:padding="7.5dp"
-                android:onClick="onClickPlus"
                 android:text="/"
                 android:textColor="@color/white"
                 android:textSize="45sp" />
@@ -159,8 +159,8 @@
                 android:layout_weight="4"
                 android:background="@drawable/textview_design_solid"
                 android:gravity="center"
+                android:onClick="onClickMultiply"
                 android:padding="7.5dp"
-                android:onClick="onClickPlus"
                 android:text="x"
                 android:textColor="@color/white"
                 android:textSize="45sp" />
@@ -219,8 +219,8 @@
                 android:layout_weight="4"
                 android:background="@drawable/textview_design_solid"
                 android:gravity="center"
+                android:onClick="onClickMinus"
                 android:padding="7.5dp"
-                android:onClick="onClickPlus"
                 android:text="-"
                 android:textColor="@color/white"
                 android:textSize="45sp" />
